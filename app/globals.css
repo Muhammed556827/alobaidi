@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #071D49;
+  --blue: #1E5EFF;
+  --gold: #C9A227;
+  --background: #FAFAFA;
+  --text: #1D1D1D;
+  --secondary: #6E6E73;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee { animation: none; }
+}
