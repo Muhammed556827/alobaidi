@@ -17,6 +17,14 @@ export const metadata = {
     "Luxury residential and commercial painting services with flawless craftsmanship.",
 };
 
+export const metadata = {
+  title: "Alobaidi Group Painting",
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
